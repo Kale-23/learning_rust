@@ -4,6 +4,6 @@
 [submodule "hello_cargo"]
 	path = hello_cargo
 	url = ./hello_cargo/
-[submodule "practices"]
-	path = practices
-	url = ./practices/
+[submodule "testing"]
+	path = testing
+	url = ./testing/
