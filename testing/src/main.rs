@@ -1,11 +1,38 @@
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 
+impl Rectangle {
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+
+    fn can_fit(&self, r: Rectangle) -> bool {
+        self.width > r.width && self.height > r.height
+    }
+
+    // fn area(&self) -> u32 {
+    //     self.width * self.height
+    // }
+}
 
 fn main() {
-    println!("hello");
+    let r1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
 
-    other_fun(56, 't');
-}
+    let r2 = Rectangle {
+        width: 10,
+        height: 30,
+    };
 
-fn other_fun(thing: i32, other_thing: char) {
-    println!("world {} {}", thing, other_thing);
-}
+    let r3 = Rectangle::square(30);
+
+    println!("Fits? {}", r1.can_fit(r2));
+
+} 
